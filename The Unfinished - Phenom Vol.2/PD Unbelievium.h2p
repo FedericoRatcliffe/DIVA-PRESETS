@@ -1,0 +1,657 @@
+/*@meta
+
+Author:
+'The Unfinished'
+
+Description:
+'Soft and drifty, warm pad.'
+
+Categories:
+'Pads:Evolving'
+
+Features:
+'Poly, Dry, Soft Attack, Slow Release, Sustained, Modulated'
+
+Character:
+'Evolving, Rich & Phat, Vintage'
+
+*/
+
+#AM=Diva
+#Vers=10001
+#Endian=little
+
+/*
+
+	Modulator Reference Table
+
+*/
+
+#nm=24
+#ms=none
+#ms=ModWhl
+#ms=PitchW
+#ms=Breath
+#ms=Xpress
+#ms=Gate
+#ms=Velocity
+#ms=Pressure
+#ms=KeyFollow
+#ms=KeyFollow2
+#ms=Alternate
+#ms=Random
+#ms=StackVoice
+#ms=VoiceMap
+#ms=Env1
+#ms=Env2
+#ms=LFO1
+#ms=LFO2
+#ms=Rectify
+#ms=Invert
+#ms=Quant
+#ms=Lag
+#ms=Adder
+#ms=Multiply
+#nv=2
+#mv=Gate
+#mv=Env1
+
+/*
+
+	Main Loop Circuit
+
+*/
+
+#cm=main
+CcOp=34.00			// Output
+#FX1=1				// Active #FX1
+#FX2=1				// Active #FX2
+
+/*
+
+	Core
+
+*/
+
+#cm=PCore
+SBase=4				// SwingBase=1/4
+Swing=0.00			// Swing
+STrig=1				// SwingTrigger
+PSong=0				// PatchSong
+PFold=0				// binary data for PatchFolder
+PFile=1				// binary data for PatchFileName
+Rev=4078				// Revision
+LED=0.82			// LED Colour
+MidiA=2				// binary data for Midi A param
+MidiP=3				// binary data for Midi P param
+
+/*
+
+	ARP Clock
+
+*/
+
+#cm=CLK
+Mult=100.00			// Multiply
+Base=1				// TimeBase=1/16
+Swing=0.00			// Swing
+Strict=1				// Strict Host Sync
+
+/*
+
+	Arpeggiator
+
+*/
+
+#cm=ARP
+Dir=1				// Direction=up
+Oct=2				// Octaves
+CDiv=0				// Multiply=1x
+Rstrt=0				// Restart=none
+OnOff=0				// OnOff
+Order=0				// Order=serial
+
+/*
+
+	VoiceCircuit
+
+*/
+
+#cm=VCC
+Voices=6				// Voices=12
+Voicing=1				// Voice Stack
+Mode=0				// Mode=poly
+PortaM=0				// GlideMode=time
+Porta=1.50			// Glide
+Porta2=0.00			// Glide2
+PRange=100.00			// GlideRange
+PB=2				// PitchBend Up
+PBD=2				// PitchBend Down
+Drft=0				// Drift
+MTunS=0				// TuningMode
+MTunN=4				// binary data for Tuning
+MTunT=5				// binary data for TuningTable
+Trsp=0				// Transpose
+FTun=0.00			// FineTuneCents
+Vc1=0.00			// Voice1
+Vc2=0.00			// Voice2
+Vc3=0.00			// Voice3
+Vc4=0.00			// Voice4
+Vc5=0.00			// Voice5
+Vc6=0.00			// Voice6
+Vc7=0.00			// Voice7
+Vc8=0.00			// Voice8
+Prior=0				// Note Priority=last
+ContEn=1				// ContinuousEnv
+rMW=0.00			// Internal ModWheel
+rPW=0.00			// Internal PitchWheel
+
+/*
+
+	GlobalSettings
+
+*/
+
+#cm=OPT
+V1T1=-4.11			// V1Tune1
+V2T1=-1.30			// V2Tune1
+V3T1=-8.07			// V3Tune1
+V4T1=-7.14			// V4Tune1
+V5T1=6.33			// V5Tune1
+V6T1=10.00			// V6Tune1
+V7T1=-5.91			// V7Tune1
+V8T1=1.43			// V8Tune1
+V1T2=22.29			// V1Tune2
+V2T2=11.32			// V2Tune2
+V3T2=8.82			// V3Tune2
+V4T2=17.12			// V4Tune2
+V5T2=7.98			// V5Tune2
+V6T2=47.85			// V6Tune2
+V7T2=66.69			// V7Tune2
+V8T2=92.19			// V8Tune2
+V1T3=-19.26			// V1Tune3
+V2T3=-41.57			// V2Tune3
+V3T3=-42.76			// V3Tune3
+V4T3=-34.05			// V4Tune3
+V5T3=-28.57			// V5Tune3
+V6T3=-10.79			// V6Tune3
+V7T3=-58.86			// V7Tune3
+V8T3=-2.83			// V8Tune3
+TSlop=33.00			// TuneSlop
+TPots=6				// binary data for TrimPots
+RndC=0				// RandomCutoff
+CSlop=14.47			// CutoffSlop
+RndG=0				// RandomGlide
+GSlop=15.39			// GlideSlop
+RndP=0				// RandomPW
+PSlop=0.40			// PWSlop
+RndE=0				// RandomEnvrate
+ESlop=3.25			// EnvrateSlop
+V1Mod=0.00			// V1Mod
+V2Mod=0.00			// V2Mod
+V3Mod=0.00			// V3Mod
+V4Mod=0.00			// V4Mod
+V5Mod=0.00			// V5Mod
+V6Mod=0.00			// V6Mod
+V7Mod=0.00			// V7Mod
+V8Mod=0.00			// V8Mod
+TransM=0				// Transient Mode=analog
+
+/*
+
+	Env1
+
+*/
+
+#cm=ENV1
+Atk=45.57			// Attack
+Dec=59.51			// Decay
+Sus=76.25			// Sustain
+Rel=48.51			// Release
+Vel=44.75			// Velocity
+Model=1				// Model=analogue
+Trig=0				// Trigger=Gate
+Quant=0				// Quantise
+Crve=0				// Curve
+RelOn=0				// Release On=VCA
+KeyFlw=0.16			// KeyFollow
+
+/*
+
+	Env2
+
+*/
+
+#cm=ENV2
+Atk=4.98			// Attack
+Dec=66.85			// Decay
+Sus=16.08			// Sustain
+Rel=5.31			// Release
+Vel=40.53			// Velocity
+Model=1				// Model=analogue
+Trig=0				// Trigger=Gate
+Quant=0				// Quantise
+Crve=0				// Curve
+RelOn=0				// Release On=VCA
+KeyFlw=7.12			// KeyFollow
+
+/*
+
+	LFO1
+
+*/
+
+#cm=LFO1
+Sync=17				// Sync=1/4 trip
+Trig=1				// Restart=gate
+Wave=1				// Waveform=triangle
+Phse=0.00			// Phase
+Polar=0				// Polarity=bipolar
+Dly=0.00			// Delay
+DMS1=0				// DepthMod Src1=none
+DMD1=82.00			// DepthMod Dpt1
+Rate=0.00			// Rate
+FMS1=0				// FreqMod Src1=none
+FMD1=0.00			// FreqMod Dpt
+
+/*
+
+	LFO2
+
+*/
+
+#cm=LFO2
+Sync=6				// Sync=1/8
+Trig=2				// Restart=single
+Wave=1				// Waveform=triangle
+Phse=0.00			// Phase
+Polar=0				// Polarity=bipolar
+Dly=0.00			// Delay
+DMS1=0				// DepthMod Src1=none
+DMD1=16.00			// DepthMod Dpt1
+Rate=0.00			// Rate
+FMS1=0				// FreqMod Src1=none
+FMD1=0.00			// FreqMod Dpt
+
+/*
+
+	MOD
+
+*/
+
+#cm=MOD
+Quant=8.35			// Quantise
+Slew=8.42			// Slew Rate
+RSrc=0				// RectifySource=none
+ISrc=0				// InvertSource=none
+QSrc=0				// QuantiseSource=none
+LSrc=0				// LagSource=none
+A1Src=0				// AddSource1=none
+A2Src=0				// AddSource2=none
+M1Src=0				// MulSource1=none
+M2Src=0				// MulSource2=none
+
+/*
+
+	OSC
+
+*/
+
+#cm=OSC
+Model=1				// Model=Dual VCO
+Tune1=0.00			// Tune1
+Tune2=0.00			// Tune2
+Tune3=0.00			// Tune3
+VtoD=61.91			// Vibrato
+PW=14.06			// PulseWidth
+Shape1=2.65			// Shape1
+Shape2=3.47			// Shape2
+Shape3=6.52			// Shape3
+FM=0.00			// FM
+Sync2=0				// Sync2
+OscMix=46.75			// OscMix
+Vol1=90.88			// Volume1
+Vol2=65.40			// Volume2
+Vol3=31.10			// Volume3
+PWShp=1				// PulseShape=__--
+SawShp=0				// SawShape=off
+SubShp=0				// SuboscShape=____----
+TM1Src=15				// Tune1ModSrc=Env2
+TM1Dpt=0.00			// Tune1ModDepth
+TM2Src=17				// Tune2ModSrc=LFO2
+TM2Dpt=0.00			// Tune2ModDepth
+PWMSrc=17				// PWModSrc=LFO2
+PWMDpt=-0.11			// PWModDepth
+Sh1Src=17				// ShapeSrc=LFO2
+Sh1Dpt=-7.84			// ShapeDepth
+Tri1=0				// Triangle1On
+Sin2=0				// Sine2On
+Saw1=1				// Saw1On
+PWM1=1				// Pwm1On
+Tri2=0				// Triangle2On
+Saw2=1				// Saw2On
+PW2=0				// Pulse2On
+PWM2=1				// PWM2On
+Noise1=0				// Noise1On
+triSp=1				// ShapeModel=analog1
+Sync3=0				// Sync3
+Noise=18.12			// NoiseVol
+NoiseC=0				// NoiseColor=white
+TM1On=0				// TuneModOsc1
+TM2On=0				// TuneModOsc2
+TM3On=0				// TuneModOsc3
+SM1On=0				// ShapeModOsc1
+SM2On=0				// ShapeModOsc2
+SM3On=0				// ShapeModOsc3
+TMmode=0				// TuneModMode=2->1, 1->1
+Wave1=1.18			// EcoWave1
+Wave2=1.20			// EcoWave2
+RMPwm=0				// RingmodPulse
+Drift=32.65			// Drift
+FmSrc=15				// FmModSrc=Env2
+FmDpt=4.00			// FmModDepth
+NoisSrc=1				// NoiseVolModSrc=ModWhl
+NoisDpt=11.25			// NoiseVolModDepth
+JpSp1=1				// JupiterShape1 16
+JpSp2=1				// JupiterShape2 16
+BpNoise=1				// Bipolar Noise
+RstPh1=0.00			// ResetPhase1
+RstPh2=0.00			// ResetPhase2
+RstPh3=0.00			// ResetPhase3
+DgtlTp1=1				// DigitalType1=TriWrap
+DgtlSp2=4.03			// DigitalShape2
+DgtlTp2=0				// DigitalType2=Multisaw
+DgtlSp3=42.62			// DigitalShape3
+DgtlSp4=0.46			// DigitalShape4
+DNoAlia=0				// DigitalAntiAlias
+
+/*
+
+	HPF
+
+*/
+
+#cm=HPF
+Model=1				// Model=HPF post
+Freq=40.53			// Frequency
+Res=3.26			// Resonance
+Rev=1				// Revision
+KeyScl=6.09			// KeyFollow
+FMSrc=0				// FreqModSrc=none
+FMDpt=22.41			// FreqModDepth
+PFreq=2				// Post-HPF Freq
+
+/*
+
+	VCF1
+
+*/
+
+#cm=VCF1
+Model=2				// Model=Multimode
+Freq=82.59			// Frequency
+Res=34.47			// Resonance
+FMSrc=1				// FreqModSrc=ModWhl
+FMDpt=26.67			// FreqModDepth
+FM2Src=17				// FreqMod2Src=LFO2
+FM2Dpt=-5.83			// FreqMod2Depth
+KeyScl=96.33			// KeyFollow
+FFM=5.22			// FilterFM
+LMode=0				// LadderMode=24db
+LColor=1				// LadderColor=rough
+SkRev=1				// SlnKyRevision
+SvfMode=0				// SvfMode=LP 24db
+Fback=43.27			// Feedback
+ResSrc=1				// ResModSrc=ModWhl
+ResDpt=16.14			// ResModDepth
+FfmSrc=0				// FmAmountModSrc=none
+FfmDpt=3.19			// FmAmountModDepth
+FbSrc=0				// FeedbackModSrc=none
+FbDpt=8.77			// FeedbackModDepth
+InTune=1				// FilterInTune
+ShpMix=4.83			// ShapeMix
+SMSrc=17				// ShapeModSrc=LFO2
+SMDpt=6.87			// ShapeModDepth
+BpUbie=0				// UhbieBandpass
+
+/*
+
+	VoiceMix1
+
+*/
+
+#cm=VCA1
+Pan=0.00			// Pan
+Vol=50.00			// Volume
+VCA=1				// VCA=Env1
+ModSrc=0				// Modulation=none
+ModDpt=0.00			// ModDepth
+PanSrc=17				// PanModulation=LFO2
+PanDpt=38.00			// PanModDepth
+Mode=0				// Mode=lin
+Offset=-0.12			// Offset
+
+/*
+
+	Scope1
+
+*/
+
+#cm=Scope1
+Mode=0				// Mode=Continuous
+frq=-5.59			// Frequency
+scl=-0.49			// Scale
+Inp=0				// Input
+cs1=0.00			// Crossing1
+cs2=0.00			// Crossing2
+pc=0				// PitchCrossings
+Mod=0				// ModSource=none
+
+/*
+
+	Effect1
+
+*/
+
+#cm=FX1
+Module='Chorus1'				// Module=Chorus1
+
+/*
+
+	Chorus1
+
+*/
+
+#cm=Chrs1
+Type=2				// Type=Ensemble
+Rate=24.04			// Rate
+Depth=31.76			// Depth
+Wet=74.21			// Wet
+
+/*
+
+	Phaser1
+
+*/
+
+#cm=Phase1
+Type=0				// Type=Stoned
+Rate=51.04			// Rate
+FB=1.15			// Feedback
+Stereo=-9.95			// Stereo
+Sync=0				// Sync
+Phase=0.94			// Phase
+Wet=97.68			// Wet
+Depth=98.25			// Depth
+Center=49.85			// Center
+
+/*
+
+	Plate1
+
+*/
+
+#cm=Plate1
+Pre=18.40			// PreDelay
+Diff=99.06			// Diffusion
+Damp=80.96			// Damp
+Decay=50.66			// Decay
+Size=140.05			// Size
+Dry=87.29			// Dry
+Wet=47.58			// Wet
+
+/*
+
+	Delay1
+
+*/
+
+#cm=Delay1
+LDel=2.00			// Left Delay
+CDel=4.00			// Center Delay
+RDel=4.00			// Right Delay
+SVol=20.00			// Side Vol
+CVol=0.00			// Center Vol
+FeedB=21.10			// Feedback
+HP=9.83			// HP
+LP=99.80			// LP
+Dry=96.96			// Dry
+Wow=50.60			// Wow
+
+/*
+
+	Rotary1
+
+*/
+
+#cm=Rtary1
+Mode=0				// Mode=Normal
+Mix=91.37			// Mix
+Bal=41.10			// Balance
+Drive=9.08			// Drive
+Stereo=99.42			// Stereo
+Out=-1.44			// Out
+Slow=29.40			// Slow
+Fast=84.97			// Fast
+RTime=49.62			// RiseTime
+Cont=0				// Controller=ModWheel
+
+/*
+
+	Effect2
+
+*/
+
+#cm=FX2
+Module='Plate2'				// Module=Plate2
+
+/*
+
+	Chorus2
+
+*/
+
+#cm=Chrs2
+Type=0				// Type=Classic
+Rate=45.68			// Rate
+Depth=41.38			// Depth
+Wet=99.64			// Wet
+
+/*
+
+	Phaser2
+
+*/
+
+#cm=Phase2
+Type=0				// Type=Stoned
+Rate=40.61			// Rate
+FB=3.35			// Feedback
+Stereo=-4.25			// Stereo
+Sync=0				// Sync
+Phase=5.20			// Phase
+Wet=94.83			// Wet
+Depth=94.98			// Depth
+Center=44.83			// Center
+
+/*
+
+	Plate2
+
+*/
+
+#cm=Plate2
+Pre=1.25			// PreDelay
+Diff=92.81			// Diffusion
+Damp=68.21			// Damp
+Decay=72.95			// Decay
+Size=142.88			// Size
+Dry=82.37			// Dry
+Wet=40.96			// Wet
+
+/*
+
+	Delay2
+
+*/
+
+#cm=Delay2
+LDel=2.00			// Left Delay
+CDel=3.00			// Center Delay
+RDel=4.00			// Right Delay
+SVol=51.50			// Side Vol
+CVol=0.00			// Center Vol
+FeedB=25.98			// Feedback
+HP=1.64			// HP
+LP=99.27			// LP
+Dry=93.25			// Dry
+Wow=48.52			// Wow
+
+/*
+
+	Rotary2
+
+*/
+
+#cm=Rtary2
+Mode=0				// Mode=Normal
+Mix=93.08			// Mix
+Bal=40.77			// Balance
+Drive=4.69			// Drive
+Stereo=97.18			// Stereo
+Out=0.98			// Out
+Slow=32.94			// Slow
+Fast=91.00			// Fast
+RTime=56.78			// RiseTime
+Cont=0				// Controller=ModWheel
+
+
+
+// Section for ugly compressed binary Data
+// DON'T TOUCH THIS
+
+$$$$1648
+?gdgceneb:aaaafpcd:aaaaiadp:aaaamiec:aaabaaaa:gfgecpfa:gigfgogp:
+gncafggp:gmcadcaa:daaaaaaa:aa:ec:eb:ea:mc:ca:ma:gi:oa:gb:mb:fa:i
+a:li:da:dp:gf:gj:go:ka:ah:en:fg:ha:ii:le!quA7emgpgdJgmcpOFfeHQFf
+fSggRSRhdHvwxyA11zA3rA3FA6FA6kiacfpcdA3mipdcghhA19ciA14baVIDA3rA
+3FVIDA3dcbocfhhA3rA3acA4ICFVIDA3UcbalpnpoUA9apA21uA4LlhieojpoUA1
+OogbcA4clLabhhA3qDA10LeeFffSgcQgmRQhgRhfgncoHdcXAHvwxyA11zA3rA3q
+uA7hfcnHQA251qMA10CfcLFeoQgpSFemJSgecoHdcXA110qDA46sA2DA1D1A1MDA
+1TDA1GDA1IDqAacA5sA3sA2DA1D1A1MDA1TDA1GDA1IDA2CA1baCA1FCA1OCA1DC
+A1LCA1gaCA1XCA1MCA1YCA1jaCA1jiCA1TCA1kiCA1laCA1NCA1GCA1miCA1naCA
+1niCA1ICA1oiCA1paCA1piCA2BA1aeBA1aiBA1amBA1baBA1beBA1biBA1bmBA1F
+BA1ceBA1ciBA1cmBA1OBA1deBA1diBA1dmBA1DBA1eeBA1eiBA1emBA1LBA1feBA
+1fiBA1fmBA1gaBA1geBA1HBA1gmBA1XBA1heBA1hiBA1hmBA1MBA1icBA1ieBA1i
+gBA1YBA1ikBA1imBA1ioBA1jaBA1jcBA1jeBA1jgBA1jiBA1jkBA1jmBA1joBA1T
+BA1kcBA1keBA1kgBA1kiBA1kkBA1kmBA1koBA1laBA1lcBA1ZBA1lgBA1NBA1lkB
+A1lmBA1loBA1GBA1EBA1meBA1mgBtA1mkBA1mmBA1moBA1naBA1ncBA1neBA1ngB
+A1niBA1nkBA1nmBA1noBA1IBA1ocBA1oeBA1ogBA1oiBA1okBA1omBA1ooBA1paB
+A1pcBA1peBA1pgBA1piBA1pkBA1pmBA1poBquA3sinjbidGmoZkglpncceabKfdh
+foeGUibmkDA1FCalcflnGadhglgPglWlcCbocbdfCNOanCPpbYCindippDmnJPBi
+cJifBbbJNBcfaojkKnkeicgEMagclEGdgaiEoijdoeKpjTcmKfmgnglEkmfpdfGb
+eghkbKkkmodjEiekpplPZheWElmfpigEfkfoZBWbojhGtmomjdkBPejjpBlabbhd
+EjmppkoBnklcWBJefmfEjemnjbKjgmfldElmbeigEhjphepBpdmjlkConNcpKoid
+idfGmgpoVCilakCBHhlfoEfnpaRCioNbfEtmfJjkEbpYokDchdljdEtlgnkagEA3
+1=118820
+  
